@@ -36,7 +36,7 @@ router.get('/', function(req, res) {
     // Make request for access_token
     return request(options)
       .then(function (response) {
-        console.log("Successfully processed authorized Instagram user. Response:\n" + response);
+        console.log("Successfully processed authorized Instagram user. Response:\n" + JSON.stringify(response));
         return response.access_token;
       })
       .catch(function (response) {
@@ -87,7 +87,7 @@ router.get('/', function(req, res) {
       res.status(200).send({'data' : airports});
     }
     catch (e) {
-      e.printStackTrace();
+      console.trace(e);
       res.sendStatus(400);
     }
   }
