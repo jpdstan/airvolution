@@ -49,7 +49,7 @@ router.get('/', function(req, res) {
   function requestLikedPictures(access_token) {
     var options = {
       method: 'GET',
-      uri: 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token + "&count=5"
+      uri: 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token
     };
 
     return request(options)
@@ -67,6 +67,11 @@ router.get('/', function(req, res) {
     try {
       var airports = [];
       console.log("Pictures: " + JSON.stringify(pictures));
+
+      if (!pictures) {
+        res.sendStatus(400);
+      }
+
       for (var i = 0; i < pictures.length; i++) {
         if (pictures[i].location != null) {
           var airport = util.getNearestAirport(pictures[i]);
