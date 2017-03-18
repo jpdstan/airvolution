@@ -56,7 +56,7 @@ router.get('/', function(req, res) {
 
     return request(options)
       .then(function (response) {
-        return response.meta.data;
+        return response;
       })
       .catch(function (response) {
         console.trace(response);
