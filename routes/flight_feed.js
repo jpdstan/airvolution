@@ -26,6 +26,7 @@ router.get('/', function(req, res) {
   };
 
   var process_response = function(response) {
+    console.log(response);
     res.status(200).send(response.body);
     // requestLikedPictures(response.body.access_token);
   };
@@ -63,6 +64,7 @@ function Location(loc) {
 }
 
 function error_response(response) {
+  console.log(response);
   res.status(response.body.code).send(response.body.error_message);
 }
 
