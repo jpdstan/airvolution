@@ -24,7 +24,7 @@ function getCode(photo, airports) {
       var data = {
         airportCode: airportCode,
         distance: distBW(photo, airports[airportCode], 'K'),
-        name: airports[airportCode].station_name
+        name: airports[airportCode].name
       };
       return data;
     })
