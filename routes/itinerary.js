@@ -49,8 +49,13 @@ mongoose.model("Itinerary", itnerary);
 router.get('/find/:id', function (req, res, next) {
     //TODO FIND itenerary with ID
 
-    res.send('USER')
-} )
+    itnerary.findById(req.params.id, function(err, itin) {
+        if (err) throw err;
+        // show the one user
+        console.log(itin);
+        res.send('USER: ' + itin);
+    });
+} );
 
 //POPULATE using BODY (PAYLOAD)
 router.post('/', function (req, res) {
