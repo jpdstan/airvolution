@@ -31,15 +31,7 @@ router.get('/secret*', function (req, res) {
 
 
 //Component #2
-router.get('/secret*', function (req, res) {
-    var key = req.query.key;
 
-    // Do methods here
-
-    res.json({ user: 'if youre seeing this kev, this may be the end...' });
-    res.end('Password: ' + key);
-
-});
 
 
 
