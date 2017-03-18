@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
 
 
 
-// Query
+// Query http://localhost:3000/secret?key=1000
 router.get('/secret*', function (req, res) {
   var key = req.query.key;
 
