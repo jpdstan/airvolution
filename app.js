@@ -10,7 +10,7 @@ var users = require('./routes/user');
 var get_flights = require('./routes/getflight');
 var flights = require('./routes/flight_feed/flight_feed');
 var itinerary = require('./routes/itinerary');
-var calc = require('./routes/calc');
+var get_closest_airport = require('./routes/get_closest_airport');
 
 var env_json = require('./env.json');
 
@@ -59,7 +59,7 @@ app.use('/users', users);
 app.use('/get_flights', get_flights);
 app.use('/flight_feed', flights);
 app.use('/itinerary', itinerary);
-app.use('/get_closest_airport', calc);
+app.use('/get_closest_airport', get_closest_airport);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

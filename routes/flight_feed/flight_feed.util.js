@@ -29,8 +29,8 @@ function getCode(photo, airports) {
 }
 
 //returns null if > 200 km or the airport code otherwise
-var getNearestAirport = function(photo, airports) {
-  var closest = getCode(photo.location, airports)
+var getNearestAirport = function(coords, airports) {
+  var closest = getCode(coords, airports)
   if (closest.distance > 200) {
     return null;
   }

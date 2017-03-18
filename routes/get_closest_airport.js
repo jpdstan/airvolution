@@ -5,10 +5,12 @@ var express = require('express');
 var router = express.Router();
 
 var fs = require('fs');
+var OBJ = JSON.parse(fs.readFileSync('airports.json', 'utf8'));
 
 
 function distBW(photo, airport, unit) {
     var photolat =  Math.PI * photo.lat/180;
+   // console.log("PHOTOLAT: " + photolat);
     var photolon = photo.lon;
     var airlat = Math.PI * airport.lat/180;
     var airlon = airport.lon;
@@ -33,10 +35,12 @@ function getCode(photo, airports){
             return blah
         }).reduce((min, curr)=> (curr.distance < min.distance) ? curr: min, {distance: Infinity})
 }
+
 //returns null if >200 km or the airport code otherwise
 function getNearestAirport(photo, airports){
 
-    var closest = getCode(photo,airports)
+    var closest = getCode(photo,airports);
+    console.log("CLOSEST: " + JSON.stringify(closest));
     if (closest.distance >200){
         return null
     }
@@ -47,23 +51,20 @@ function getNearestAirport(photo, airports){
 }
 
 
-var OBJ = JSON.parse(fs.readFileSync('airports.json', 'utf8'));
 /* GET closest airport. */
 router.get('/', function(req, res) {
-    var latit = req.params.latitude;
-    var long = req.params.longitude;
     var parsedJSON = OBJ;
 
     var user = {
-        lon: long,
-        lat: latit
-}
-    //console.log("YOYO" + JSON.stringify(parsedJSON));
-    var obj = getCode(user, parsedJSON);
+        lon: req.query.longitude,
+        lat: req.query.latitude
+};
+    console.log("YOYO" + JSON.stringify(user));
+    var closest_airport_code = getNearestAirport(user, parsedJSON);
 
     //RETURN TO FRONT END: CLOSEST AIRPORT CODE
-    res.json("ANSWER: "+JSON.stringify(obj));
-    res.send('respond with a resource'+obj.code);
+    res.json("ANSWER: "+closest_airport_code);
+    res.send('respond with a resource'+closest_airport_code);
 });
 
 module.exports = router;
