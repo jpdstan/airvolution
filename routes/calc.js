@@ -33,10 +33,10 @@ function getCode(photo, airports){
             return blah
         }).reduce((min, curr)=> (curr.distance < min.distance) ? curr: min, {distance: Infinity})
 }
-//returns null if >200 km or the airport code otherwise
-function getNearestAirport(photo, airports){
+/* Takes in coordinates { x : <Double>, y : <Double> } */
+function getNearestAirport(coords, airports){
 
-    var closest = getCode(photo,airports)
+    var closest = getCode(coords,airports)
     if (closest.distance >200){
         return null
     }
@@ -47,7 +47,7 @@ function getNearestAirport(photo, airports){
 }
 
 
-var OBJ = JSON.parse(fs.readFileSync('airports.json', 'utf8'));
+var OBJ = JSON.parse(fs.readFileSync('../assets/airports.json', 'utf8'));
 /* GET closest airport. */
 router.get('/', function(req, res) {
     var latit = req.params.latitude;
