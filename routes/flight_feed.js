@@ -4,6 +4,7 @@ var request = require('request');
 
 const client_id = "56e99f7170ff4ab9801ed2f015d79b1e";
 const client_secret = "3ed27344abb3474584cd013c8b786b90";
+const host = 'https://airvolution-staging.herokuapp.com';
 
 /* GET flight locations. */
 router.get('/', function(req, res) {
@@ -15,7 +16,7 @@ router.get('/', function(req, res) {
     client_id : client_id,
     client_secret : client_secret,
     grant_type : 'authorization_code',
-    redirect_uri : 'https://airvolution-staging.herokuapp.com',
+    redirect_uri : host + '/flights',
     code : code
   };
 
