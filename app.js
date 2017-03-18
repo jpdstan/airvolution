@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
-var get_flights = require('./routes/get_flights');
+var get_flights = require('./routes/getflight');
 
 var app = express();
 
