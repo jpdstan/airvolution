@@ -7,11 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
-<<<<<<< b8c6196d9224262828902b9e3143d64d5ddc1115
 var get_flights = require('./routes/getflight');
-=======
 var flights = require('./routes/flight_feed');
->>>>>>> add flight feed, remove view engine and view rendering
 
 var app = express();
 
