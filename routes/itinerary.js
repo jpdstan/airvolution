@@ -13,7 +13,7 @@ var request = require('request');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// TBD
+// Schema for each saved Itineary page
 var userSchema = new Schema({
     url: String,
     destination: String, // Literal Destination (i.e., Phuket, Hong Kong)
@@ -21,24 +21,26 @@ var userSchema = new Schema({
     liked_pictures: [String],
     departing_flights: [
         {
-        carrier_code: String,
-        flight_number: Number,
-        STD_UTC: String, // Departure time
-        STA_UTC: String, // Arrival time
-        estimated_time: String,
-        final_cost: Number,
-        currency_token: String
-                }],
+            carrier_code: String,
+            flight_number: Number,
+            STD_UTC: String, // Departure time
+            STA_UTC: String, // Arrival time
+            estimated_time: String,
+            final_cost: Number,
+            currency_token: String
+        }
+    ],
     returning_flights: [
-    {
-    carrier_code: String,
-        flight_number: Number,
-        STD_UTC: String, // Departure time
-        STA_UTC: String, // Arrival time
-        estimated_time: String,
-        final_cost: Number,
-        currency_token: String
-}],
+        {
+            carrier_code: String,
+            flight_number: Number,
+            STD_UTC: String, // Departure time
+            STA_UTC: String, // Arrival time
+            estimated_time: String,
+            final_cost: Number,
+            currency_token: String
+        }
+    ],
     updated_at: Date
 });
 mongoose.model("Itinerary", itnerary);
