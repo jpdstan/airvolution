@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request-promise');
-const airports = require('../assets/airports.json');
+const airports = require('../../assets/airports.json');
 
 var util = require('./flight_feed.util.js');
 
