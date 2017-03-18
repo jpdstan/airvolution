@@ -83,7 +83,7 @@ router.get('/', function(req, res) {
       }
 
       airports = airports.reduce(function (acc, curr) {
-        console.log(JSON.stringify(curr));
+        console.log("Current " + JSON.stringify(curr));
         if (acc[Object.keys(curr)[0]]) {
           acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
         } else {
