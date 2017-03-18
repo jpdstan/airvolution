@@ -82,7 +82,7 @@ router.get('/', function(req, res) {
       }
 
       airports = airports.reduce(function (acc, curr) {
-        if (acc[curr.code]) {
+        if (acc[Object.keys(curr)[0]]) {
           acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
         } else {
           acc[Object.keys(curr)[0]]['referer_photos'] = [curr.referer_photo];
