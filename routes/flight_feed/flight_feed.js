@@ -74,9 +74,9 @@ router.get('/', function(req, res) {
         res.sendStatus(400);
       }
 
-      for (var i = 0; i < pictures.length; i++) {
+      for (var i = 0; i < pictures['data'].length; i++) {
         if (pictures[i].location != null) {
-          var airport = util.getNearestAirport(pictures[i]);
+          var airport = util.getNearestAirport(pictures['data'][i]);
           airports.push(airport);
         }
       }
