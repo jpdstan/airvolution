@@ -46,9 +46,9 @@ request(options, function(err, res, body) {
 });
 
 // Processes flights data from GetAvailability and converts it into usable data for get_flights endpoint.
-var process_flights = function(availablity_data, list_size){
+var process_flights_one_way = function(flight_data, list_size) {
     // Sort flights in FlightSearch by cheapest flight
-    var cheapest_flights = availablity_data["data"]["FlightSearch"].sort(function(a, b) {
+    var cheapest_flights = flight_data.sort(function(a, b) {
         price_a = a["TotalJourneyAmount"]["FareType"][0]["ADT"]["FinalFare"];
         price_b = b["TotalJourneyAmount"]["FareType"][0]["ADT"]["FinalFare"];
 
@@ -61,7 +61,7 @@ var process_flights = function(availablity_data, list_size){
         }
     });
     // Only want up to LIST_SIZE flights to be reccomended to user.
-    cheapest_flights = cheapest_flights[0].slice(0, list_size);
+    cheapest_flights = cheapest_flights.slice(0, list_size);
     // Populate new JSON object to return for get_flights endpoint.
     var flights = cheapest_flights.map(function(obj) {
         var segment = obj["Segment"][0];
@@ -74,15 +74,25 @@ var process_flights = function(availablity_data, list_size){
             estimated_time: segment.EstimatedTime,
             final_fare: obj.TotalJourneyAmount.FareType[0].ADT.FinalFare,
             currency_code: obj.TotalJourneyAmount.FareType[0].ADT.CurrencyCode,
-        }
+        };
     });
     var processed_flights = {};
     processed_flights["flights"] = flights;
     return processed_flights;
 };
 
+process_flights = function(availability_data, list_size) {
+    var departing = availability_data["data"]["FlightSearch"][0];
+    var returning = availability_data["data"]["FlightSearch"][1];
 
+    var processed_departing = process_flights_one_way(departing, 3);
+    var processed_return = process_flights_one_way(returning, 3);
 
+    return {
+        departing_flights: processed_departing,
+        return_flights: processed_return
+    };
+}
 
 // CONFIRMED: WORKING
 // http://localhost:3000/get_flights?num_passengers=2&arrival_station=SIN&departure_date=2017-04-19&departure_station=KUL&return_date=2017-04-20
