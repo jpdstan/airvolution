@@ -57,7 +57,7 @@ router.get('/', function(req, res) {
         return response.data;
       })
       .catch(function (response) {
-        //console.trace(response);
+        console.trace(response);
         res.sendStatus(400);
       });
   }

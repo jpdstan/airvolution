@@ -47,23 +47,23 @@ function getNearestAirport(coords, airports){
 }
 
 
-var OBJ = JSON.parse(fs.readFileSync('../assets/airports.json', 'utf8'));
-/* GET closest airport. */
-router.get('/', function(req, res) {
-    var latit = req.params.latitude;
-    var long = req.params.longitude;
-    var parsedJSON = OBJ;
-
-    var user = {
-        lon: long,
-        lat: latit
-}
-    //console.log("YOYO" + JSON.stringify(parsedJSON));
-    var obj = getCode(user, parsedJSON);
-
-    //RETURN TO FRONT END: CLOSEST AIRPORT CODE
-    res.json("ANSWER: "+JSON.stringify(obj));
-    res.send('respond with a resource'+obj.code);
-});
+//var OBJ = JSON.parse(fs.readFileSync('../assets/airports.json', 'utf8'));
+///* GET closest airport. */
+//router.get('/', function(req, res) {
+//    var latit = req.params.latitude;
+//    var long = req.params.longitude;
+//    var parsedJSON = OBJ;
+//
+//    var user = {
+//        lon: long,
+//        lat: latit
+//}
+//    //console.log("YOYO" + JSON.stringify(parsedJSON));
+//    var obj = getCode(user, parsedJSON);
+//
+//    //RETURN TO FRONT END: CLOSEST AIRPORT CODE
+//    res.json("ANSWER: "+JSON.stringify(obj));
+//    res.send('respond with a resource'+obj.code);
+//});
 
 module.exports = router;
