@@ -42,7 +42,7 @@ router.get('/', function(req, res) {
   }
 
   /* Given an ACCESS_TOKEN, return the associated user's recent liked pictures. */
-  function requestLikedPictures() {
+  function requestLikedPictures(access_token) {
     var options = {
       method: 'GET',
       uri: 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token + "&count=5"
