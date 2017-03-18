@@ -1,0 +1,1287 @@
+{
+  "response": {
+    "responseTime": "2017-02-15 11:50:13",
+    "responseCode": 1000,
+    "responseMessage": "Success"
+  },
+  "data": {
+    "FlightSearch": [
+      [
+        {
+          "JourneySellKey": "AK~ 701~ ~~KUL~02/19/2017 06:05~SIN~02/19/2017 07:10~",
+          "LowestJourneyFare": 1,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "1",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_0_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 701~ ~~KUL~02/19/2017 06:05~SIN~02/19/2017 07:10~",
+              "STA": "2017-02-19T07:10:00",
+              "STD": "2017-02-19T06:05:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 701",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 06:05:00",
+              "STA_UTC": "2017-02-19 07:10:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "1",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T06:05:00",
+                  "STA": "2017-02-19T07:10:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 701",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 0
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 703~ ~~KUL~02/19/2017 07:15~SIN~02/19/2017 08:20~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "18",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_1_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 703~ ~~KUL~02/19/2017 07:15~SIN~02/19/2017 08:20~",
+              "STA": "2017-02-19T08:20:00",
+              "STD": "2017-02-19T07:15:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 703",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 07:15:00",
+              "STA_UTC": "2017-02-19 08:20:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "18",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T07:15:00",
+                  "STA": "2017-02-19T08:20:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 703",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 705~ ~~KUL~02/19/2017 08:30~SIN~02/19/2017 09:35~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_2_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 705~ ~~KUL~02/19/2017 08:30~SIN~02/19/2017 09:35~",
+              "STA": "2017-02-19T09:35:00",
+              "STD": "2017-02-19T08:30:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 705",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 08:30:00",
+              "STA_UTC": "2017-02-19 09:35:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T08:30:00",
+                  "STA": "2017-02-19T09:35:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 705",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 707~ ~~KUL~02/19/2017 10:45~SIN~02/19/2017 11:45~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_3_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 707~ ~~KUL~02/19/2017 10:45~SIN~02/19/2017 11:45~",
+              "STA": "2017-02-19T11:45:00",
+              "STD": "2017-02-19T10:45:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 707",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 10:45:00",
+              "STA_UTC": "2017-02-19 11:45:00",
+              "EstimatedTime": "1 Hours 0 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T10:45:00",
+                  "STA": "2017-02-19T11:45:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 707",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 711~ ~~KUL~02/19/2017 12:40~SIN~02/19/2017 13:40~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "11",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_4_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 711~ ~~KUL~02/19/2017 12:40~SIN~02/19/2017 13:40~",
+              "STA": "2017-02-19T13:40:00",
+              "STD": "2017-02-19T12:40:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 711",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 12:40:00",
+              "STA_UTC": "2017-02-19 13:40:00",
+              "EstimatedTime": "1 Hours 0 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "11",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T12:40:00",
+                  "STA": "2017-02-19T13:40:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 711",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 9
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 713~ ~~KUL~02/19/2017 13:25~SIN~02/19/2017 14:30~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_5_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 713~ ~~KUL~02/19/2017 13:25~SIN~02/19/2017 14:30~",
+              "STA": "2017-02-19T14:30:00",
+              "STD": "2017-02-19T13:25:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 713",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 13:25:00",
+              "STA_UTC": "2017-02-19 14:30:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T13:25:00",
+                  "STA": "2017-02-19T14:30:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 713",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 715~ ~~KUL~02/19/2017 15:05~SIN~02/19/2017 16:10~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_6_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 715~ ~~KUL~02/19/2017 15:05~SIN~02/19/2017 16:10~",
+              "STA": "2017-02-19T16:10:00",
+              "STD": "2017-02-19T15:05:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 715",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 15:05:00",
+              "STA_UTC": "2017-02-19 16:10:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T15:05:00",
+                  "STA": "2017-02-19T16:10:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 715",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 717~ ~~KUL~02/19/2017 17:00~SIN~02/19/2017 18:00~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_7_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 717~ ~~KUL~02/19/2017 17:00~SIN~02/19/2017 18:00~",
+              "STA": "2017-02-19T18:00:00",
+              "STD": "2017-02-19T17:00:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 717",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 17:00:00",
+              "STA_UTC": "2017-02-19 18:00:00",
+              "EstimatedTime": "1 Hours 0 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T17:00:00",
+                  "STA": "2017-02-19T18:00:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 717",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 719~ ~~KUL~02/19/2017 18:35~SIN~02/19/2017 19:40~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_8_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 719~ ~~KUL~02/19/2017 18:35~SIN~02/19/2017 19:40~",
+              "STA": "2017-02-19T19:40:00",
+              "STD": "2017-02-19T18:35:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 719",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 18:35:00",
+              "STA_UTC": "2017-02-19 19:40:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T18:35:00",
+                  "STA": "2017-02-19T19:40:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 719",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 721~ ~~KUL~02/19/2017 20:10~SIN~02/19/2017 21:20~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_9_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 721~ ~~KUL~02/19/2017 20:10~SIN~02/19/2017 21:20~",
+              "STA": "2017-02-19T21:20:00",
+              "STD": "2017-02-19T20:10:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 721",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 20:10:00",
+              "STA_UTC": "2017-02-19 21:20:00",
+              "EstimatedTime": "1 Hours 10 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T20:10:00",
+                  "STA": "2017-02-19T21:20:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 721",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        },
+        {
+          "JourneySellKey": "AK~ 723~ ~~KUL~02/19/2017 22:00~SIN~02/19/2017 23:05~",
+          "LowestJourneyFare": 0,
+          "JourneyDiscount": 0,
+          "FlightStatus": 1,
+          "ValuePackAvailable": 0,
+          "HaveLowFare": 1,
+          "HavePremiumFare": 0,
+          "ValuePackageTotal": 0,
+          "ValuePackageTotalOffset": 0,
+          "LessThan24Hrs": 0,
+          "LessThan2Hrs": 0,
+          "ValuePackageSsrList": [],
+          "CityIslandTransfer": false,
+          "TotalSegment": 1,
+          "HaveThruflightSegment": false,
+          "RouteAllowOfferValuepack": true,
+          "TotalJourneyAmount": {
+            "FareType": [
+              {
+                "MinAvailableSeats": "20",
+                "ReservedDisplay1": null,
+                "ReservedDisplay2": null,
+                "FareStatus": 1,
+                "FareUniqueID": "ID_2_10_0",
+                "ADT": {
+                  "OriginalFare": 72.18,
+                  "FinalFare": 72.18,
+                  "CurrencyCode": "MYR"
+                }
+              }
+            ]
+          },
+          "TransitInfo": null,
+          "Segment": [
+            {
+              "AirlineCompany": "AirAsia",
+              "ArrivalStation": "SIN",
+              "DepartureStation": "KUL",
+              "SegmentSellKey": "AK~ 723~ ~~KUL~02/19/2017 22:00~SIN~02/19/2017 23:05~",
+              "STA": "2017-02-19T23:05:00",
+              "STD": "2017-02-19T22:00:00",
+              "International": "true",
+              "CarrierCode": "AK",
+              "FlightNumber": " 723",
+              "OpSuffix": " ",
+              "SegmentType": 0,
+              "IsThruflightSegment": false,
+              "DepartureTimeZone_UtcOffset": "+0800",
+              "ArrivalTimeZone_UtcOffset": "+0800",
+              "STD_UTC": "2017-02-19 22:00:00",
+              "STA_UTC": "2017-02-19 23:05:00",
+              "EstimatedTime": "1 Hours 5 Minutes ",
+              "Fare": [
+                {
+                  "ClassOfService": "Z",
+                  "RuleNumber": "AABL",
+                  "FareBasisCode": "Z00H000",
+                  "FareSequence": "1",
+                  "FareClassOfService": "Z",
+                  "FareApplicationType": "Route",
+                  "ProductClass": "EC",
+                  "FareSellKey": "0~Z~~Z00H000~AABL~~1~X",
+                  "AvailableCount": "20",
+                  "Status": "Active",
+                  "PaxFare": {
+                    "ADT": {
+                      "PaxType": "ADT",
+                      "PaxDiscountCode": "",
+                      "FareDiscountCode": "",
+                      "TotalFare": 72.18,
+                      "ServiceCharges": [
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "32.0800",
+                          "ChargeCode": "",
+                          "ChargeType": "FarePrice",
+                          "TicketCode": ""
+                        },
+                        {
+                          "CurrencyCode": "MYR",
+                          "Amount": "40.10000000",
+                          "ChargeCode": "",
+                          "ChargeType": "Tax",
+                          "TicketCode": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "Legs": [
+                {
+                  "DepartureStation": "KUL",
+                  "ArrivalStation": "SIN",
+                  "STD": "2017-02-19T22:00:00",
+                  "STA": "2017-02-19T23:05:00",
+                  "CarrierCode": "AK",
+                  "FlightNumber": " 723",
+                  "DepartureStationName": "Kuala Lumpur",
+                  "ArrivalStationName": "Singapore"
+                }
+              ],
+              "StationDisplay": [
+                "KUL",
+                "SIN"
+              ],
+              "InftAvailability": 10
+            }
+          ],
+          "FareProductClassList": {
+            "lowfare": 0
+          }
+        }
+      ]
+    ],
+    "LowestFareArr": [
+      {
+        "2017-02-18": 72.18,
+        "2017-02-20": 72.18,
+        "2017-02-19": 72.18
+      }
+    ],
+    "JourneyDisplay": [
+      [
+        "KUL",
+        "SIN"
+      ]
+    ],
+    "FareDiscountAvailable": 0,
+    "userCurrencyCode": "MYR",
+    "displayCurrencyCode": "MYR",
+    "exchangeRate": 1,
+    "departureCurrencyCode": "MYR",
+    "AustraliaSpecialNote": [],
+    "captchaVerification": 0
+  }
+}
