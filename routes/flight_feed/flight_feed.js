@@ -19,6 +19,7 @@ router.get('/', function(req, res) {
 
   /* Form the request to Instagram given CODE in the request query for an ACCESS_TOKEN. */
   function getAccessToken(code) {
+    console.log("Getting access token");
     var uri = 'https://api.instagram.com/oauth/access_token';
     var options = {
       method : 'POST',
@@ -47,6 +48,7 @@ router.get('/', function(req, res) {
 
   /* Given an ACCESS_TOKEN, return the associated user's recent liked pictures. */
   function requestLikedPictures(access_token) {
+    console.log("Requesting liked pictures");
     var options = {
       method: 'GET',
       uri: 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token
