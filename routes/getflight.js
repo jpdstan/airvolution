@@ -4,22 +4,22 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
+var request = require('request');
 
 
-//CRON JOB
+
+
+//CRON JOB for refreshing the sessions
 var CronJob = require('cron').CronJob;
 var job = new CronJob({
-    cronTime: '* 4 * * *',
+    cronTime: '* 3 * * *',
     onTick: function() {
 
-        //Getting session every 4 minutes
-        http.get(options, function(resp){
-            resp.on('data', function(chunk){
-                //do something with chunk
-                console.log("HTTP POST: " + chunk);
-            });
-        }).on("error", function(e){
-            console.log("Got error: " + e.message);
+        //Getting session every 3 minutes
+        console.log("YOOOO UPDATING SESSION!");
+        request(options, function(err, res, body) {
+            let json = JSON.parse(body);
+            console.log(json);
         });
 
     },
@@ -28,15 +28,7 @@ var job = new CronJob({
 });
 
 
-
-/* GET users listing. */
-router.get('/yo', function(req, res) {
-    res.send('Yo ima getting some sessions now');
-    job.start();
-
-});
-
-// Sessions
+// Options setting for sessions
 var options = {
     url: 'https://airvolution-api.airasia.com/2017/api/',
     method: 'POST',
@@ -48,10 +40,16 @@ var options = {
     body: dataString = 'actionName=GetSession'
 };
 
+request(options, function(err, res, body) {
+    let json = JSON.parse(body);
+    console.log(json);
+});
 
 
 // Play http://localhost:3000/get_flights?num_passengers=1000&arrival_station=1000&departure_date=1000&departure_station=1000=1000&return_date=1000
 router.get('/*', function (req, res) {
+    job.start(); // API Session updates every 4 minutes
+
     var num_passengers = req.query.num_passengers;
     var arrival_station = req.query.arrival_station;
     var departure_date = req.query.departure_date;
