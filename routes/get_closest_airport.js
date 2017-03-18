@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 var fs = require('fs');
-var OBJ = JSON.parse(fs.readFileSync('airports.json', 'utf8'));
+var OBJ = JSON.parse(fs.readFileSync('assets/airports.json', 'utf8'));
 
 
 function distBW(photo, airport, unit) {
@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
     var closest_airport_code = getNearestAirport(user, parsedJSON);
 
     //RETURN TO FRONT END: CLOSEST AIRPORT CODE
-    res.json(closest_airport_code);
+    res.status(200).json(closest_airport_code);
     res.send('respond with a resource'+closest_airport_code);
 });
 

@@ -1,3 +1,6 @@
+var fs = require('fs');
+var OBJ = JSON.parse(fs.readFileSync('assets/airports.json', 'utf8'));
+
 function distBW(photo, airport, unit) {
   var photolat =  Math.PI * photo.lat/180
   var photolon = photo.lon
@@ -29,15 +32,15 @@ function getCode(photo, airports) {
 }
 
 //returns null if > 200 km or the airport code otherwise
-var getNearestAirport = function(coords, airports) {
-  var closest = getCode(coords, airports)
+var getNearestAirport = function(insta_obj, airports) {
+  var closest = getCode(insta_obj.location, airports)
   if (closest.distance > 200) {
     return null;
   }
   else {
     var airport_data = {};
     airport_data[closest.airportCode]['name'] = closest.name;
-    airport_data[closest.airportCode]['referer_photo'] = photo.images.standard_resolution;
+    airport_data[closest.airportCode]['referer_photo'] = insta_obj.images.standard_resolution;
     return closest;
   }
 }

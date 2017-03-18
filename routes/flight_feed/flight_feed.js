@@ -68,8 +68,7 @@ router.get('/', function(req, res) {
       var airports = [];
       for (var i = 0; i < pictures.length; i++) {
         if (pictures[i].location != null) {
-          var picture = new Picture(pictures[i]);
-          var airport = util.getNearestAirport(picture);
+          var airport = util.getNearestAirport(pictures[i]);
           airports.push(airport);
         }
       }
@@ -92,9 +91,5 @@ router.get('/', function(req, res) {
     }
   }
 });
-
-function calculateNearestAirport(picture) {
-  // ...
-}
 
 module.exports = router;
