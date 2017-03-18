@@ -3,13 +3,9 @@ var router = express.Router();
 var request = require('request-promise');
 const airports = require('../assets/airports.json');
 
-/* Instagram credentials. */
-const client_id = "56e99f7170ff4ab9801ed2f015d79b1e";
-const client_secret = "3ed27344abb3474584cd013c8b786b90";
-
-const host = 'https://airvolution-staging.herokuapp.com';
-
-/* GET flight locations. */
+/* GET a list of airports and their associated liked Insta photos.
+* See documentation for example response.
+* */
 router.get('/', function(req, res) {
   console.log("Loading flight feed...");
   var code = req.query.code;
@@ -21,13 +17,13 @@ router.get('/', function(req, res) {
   function getAccessToken(code) {
     var uri = 'https://api.instagram.com/oauth/access_token';
     var options = {
-      method: 'POST',
-      uri: uri,
-      form: {
-        client_id: client_id,
-        client_secret: client_secret,
+      method : 'POST',
+      uri : uri,
+      form : {
+        client_id: req.app.locals.INSTA_ID,
+        client_secret: req.app.locals.INSTA_SECRET,
         grant_type: 'authorization_code',
-        redirect_uri: host + '/flight_feed',
+        redirect_uri: req.app.locals.HOST + '/flight_feed',
         code: code
       },
       json: true
