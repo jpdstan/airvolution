@@ -14,14 +14,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // TBD
-var Schema = new mongoose.Schema;
-var itinerary = new Schema ({
+var userSchema = new Schema({
     url: String,
     destination: String, // Literal Destination (i.e., Phuket, Hong Kong)
     airport: String, // in airport code
     liked_pictures: [String],
     departing_flights: [
-        flight: {
+        {
         carrier_code: String,
         flight_number: Number,
         STD_UTC: String, // Departure time
@@ -31,7 +30,7 @@ var itinerary = new Schema ({
         currency_token: String
                 }],
     returning_flights: [
-    flight: {
+    {
     carrier_code: String,
         flight_number: Number,
         STD_UTC: String, // Departure time
@@ -39,11 +38,10 @@ var itinerary = new Schema ({
         estimated_time: String,
         final_cost: Number,
         currency_token: String
-}
-],
-updated_at: Date
+}],
+    updated_at: Date
 });
-
+mongoose.model("Itinerary", itnerary);
 
 
 
