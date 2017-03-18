@@ -69,7 +69,7 @@ router.get('/', function(req, res) {
       for (var i = 0; i < pictures.length; i++) {
         if (pictures[i].location != null) {
           var picture = new Picture(pictures[i]);
-          var airport = calculateNearestAirport(picture);
+          var airport = util.getNearestAirport(picture);
           airports.push(airport);
         }
       }
