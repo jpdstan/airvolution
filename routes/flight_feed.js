@@ -64,8 +64,7 @@ function Location(loc) {
 }
 
 function error_response(response) {
-  console.log(response);
-  res.status(response.body.code).send(response.body.error_message);
+  console.error(response);
 }
 
 module.exports = router;
