@@ -68,6 +68,7 @@ router.get('/', function(req, res) {
   function findAirports(pictures) {
     try {
       var airports = [];
+      console.log("Pictures: " + JSON.stringify(pictures));
 
       if (!pictures) {
         res.sendStatus(400);
