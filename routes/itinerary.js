@@ -57,7 +57,7 @@ router.get('/find/:id', function (req, res, next) {
         console.log(itin);
         res.send('USER: ' + itin);
     });
-} );
+});
 
 //POPULATE using BODY (PAYLOAD)
 router.post('/', function (req, res) {
