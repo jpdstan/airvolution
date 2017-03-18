@@ -83,10 +83,10 @@ router.get('/', function(req, res) {
 
       airports = airports.reduce(function (acc, curr) {
         if (acc[curr.code]) {
-          acc[curr.code]['referer_photos'].push(curr.referer_photo);
+          acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
         } else {
-          acc[curr.code]['referer_photos'] = [curr.referer_photo];
-          acc[curr.code]['station_name'] = curr.name;
+          acc[Object.keys(curr)[0]]['referer_photos'] = [curr.referer_photo];
+          acc[Object.keys(curr)[0]]['station_name'] = curr.name;
         }
         return acc;
       }, {});
