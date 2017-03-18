@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/get_flights', get_flights);
-app.use('/flights', flights);
+app.use('/flight_feed', flights);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

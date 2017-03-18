@@ -2,13 +2,37 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
+const client_id = "56e99f7170ff4ab9801ed2f015d79b1e";
+const client_secret = "3ed27344abb3474584cd013c8b786b90";
+
 /* GET flight locations. */
 router.get('/', function(req, res) {
-  console.log("Getting flight locations....");
 
   // var user_id = req.query.user_id;
-  var access_token = req.query.access_token;
+  var code = req.query.code;
+  var uri =  'https://api.instagram.com/oauth/access_token';
+  var body = {
+    client_id : client_id,
+    client_secret : client_secret,
+    grant_type : 'authorization_code',
+    redirect_uri : 'https://airvolution-staging.herokuapp.com',
+    code : code
+  };
 
+  var process_response = function(error, response, body) {
+    if (error) {
+      // todo
+    } else {
+      requestLikedPictures(response.body.access_token);
+    }
+  };
+
+  // make the request to instagram
+  request.post(uri, body, process_response);
+
+});
+
+function requestLikedPictures(access_token) {
   var options = {
     uri : 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token + "&count=1",
     method : 'GET'
@@ -16,15 +40,17 @@ router.get('/', function(req, res) {
 
   var process_response = function(error, response, body) {
     if (error) {
-      // todo
+
     } else {
-      // todo
+      var location_list = body.data; // todo(stan): probably incorrect, hold here for now
+      for (var i = 0; i < location_list.length; i++) {
+        var location = new Location(location_list[i]);
+      }
     }
   };
 
-  // make the request to instagram
   request(options, process_response);
-});
+}
 
 function Location(loc) {
   this.id = loc.id;
