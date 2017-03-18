@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/user');
 var get_flights = require('./routes/getflight');
-var flights = require('./routes/flight_feed');
+var flights = require('./routes/flight_feed/flight_feed');
 var itinerary = require('./routes/itinerary');
 var calc = require('./routes/calc');
 
