@@ -1,36 +1,36 @@
 var express = require('express');
 var router = express.Router();
-var http = require('http');
+var request = require('request');
 
 /* GET flight locations. */
 router.get('/', function(req, res) {
   console.log("Getting flight locations....");
 
-  var user_id = req.params['user_id'];
-  var access_token = req.params['access_token'];
+  // var user_id = req.query.user_id;
+  var access_token = req.query.access_token;
+
   var options = {
-    host : 'api.instagram.com',
-    path : '/v1/users/self/media/liked?access_token=' + access_token + "&count=1",
+    uri : 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token + "&count=1",
     method : 'GET'
   };
 
-  console.log(options.path);
-
-  var process_response = function(response) {
-    response.on('data', function (data) {
-      console.log("From insta: " + data);
-      res.sendStatus(200);
-    });
-    response.on('end', function () {
-      console.log("Request sent");
-    });
+  var process_response = function(error, response, body) {
+    if (error) {
+      // todo
+    } else {
+      // todo
+    }
   };
 
-  http.request(options, process_response).end();
-
-
+  // make the request to instagram
+  request(options, process_response);
 });
 
-
+function Location(loc) {
+  this.id = loc.id;
+  this.latitude = loc.latitude;
+  this.longitude = loc.longitude;
+  this.url = loc.images.standard_resolution.url;
+}
 
 module.exports = router;
