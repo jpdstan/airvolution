@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
     var closest_airport_code = getNearestAirport(user, parsedJSON);
 
     //RETURN TO FRONT END: CLOSEST AIRPORT CODE
-    res.json("ANSWER: "+closest_airport_code);
+    res.json(closest_airport_code);
     res.send('respond with a resource'+closest_airport_code);
 });
 
