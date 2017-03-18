@@ -63,11 +63,11 @@ var Itinerary = mongoose.model("Itinerary", itinerary);
 // Returning
 router.get('/find/:id', function (req, res, next) {
     //TODO FIND itenerary with ID
-    Itinerary.find({ id: req.params.id }, function(err, itin) {
+    Itinerary.find({ id: req.params._id }, function(err, itin) {
         if (err) throw err;
         res.json(itin);
-    })
-})
+    });
+});
 
 //POPULATE using BODY (PAYLOAD)
 router.post('/', function (req, res) {
