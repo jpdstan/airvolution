@@ -13,9 +13,16 @@ var request = require('request');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var uri = 'mongodb://fady:fady@ds135680.mlab.com:35680/airvolution';
+
+mongoose.connect(uri);
+
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+
 // Schema for each saved Itineary page
-var userSchema = new Schema({
-    url: String,
+var itinerary = new Schema({
     destination: String, // Literal Destination (i.e., Phuket, Hong Kong)
     airport: String, // in airport code
     liked_pictures: [String],
@@ -43,26 +50,41 @@ var userSchema = new Schema({
     ],
     updated_at: Date
 });
-mongoose.model("Itinerary", itnerary);
 
+var Itinerary = mongoose.model("Itinerary", itinerary);
+
+// // returns URL for itineary based on id 
+// var getUrl = function(id) {
+//     // TODO: change to actual hosted url 
+//     return "localhost:3000?id=" + id.toString();
+// }
 
 
 // Returning
 router.get('/find/:id', function (req, res, next) {
     //TODO FIND itenerary with ID
-
-    itnerary.findById(req.params.id, function(err, itin) {
+    Itinerary.find({ id: req.params.id }, function(err, itin) {
         if (err) throw err;
-        // show the one user
-        console.log(itin);
-        res.send('USER: ' + itin);
-    });
-});
+        res.json(itin);
+    })
+})
 
 //POPULATE using BODY (PAYLOAD)
 router.post('/', function (req, res) {
-  var secret = req.body.secret;
-  res.end('Password: ' + secret);
+  var itinerary = Itinerary({
+    destination: req.body.destination,
+    airport: req.body.airport,
+    liked_pictures: req.body.liked_pictures,
+    departing_flights: req.body.departing_flights,
+    returning_flights: req.body.returning_flights,
+    updated_at: req.body.updated_at
+  });
+  console.log("POST YALL \n");
+  itinerary.save(function(err, it) {
+    if (err) throw err;
+    console.log("itineary populated!");
+    res.json(it._id)
+  });
 });
 
 module.exports = router;
