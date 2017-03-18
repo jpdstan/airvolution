@@ -77,11 +77,13 @@ router.get('/', function(req, res) {
       for (var i = 0; i < pictures['data'].length; i++) {
         if (pictures['data'][i].location != null) {
           var airport = util.getNearestAirport(pictures['data'][i]);
-          airports.push(airport);
+          if (airport != null)
+            airports.push(airport);
         }
       }
 
       airports = airports.reduce(function (acc, curr) {
+        console.log(JSON.stringify(curr));
         if (acc[Object.keys(curr)[0]]) {
           acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
         } else {
