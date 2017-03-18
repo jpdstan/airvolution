@@ -76,6 +76,7 @@ var process_flights_one_way = function(flight_data, list_size) {
             currency_code: obj.TotalJourneyAmount.FareType[0].ADT.CurrencyCode,
         };
     });
+    
     return flights;
 };
 
