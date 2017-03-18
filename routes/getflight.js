@@ -93,6 +93,7 @@ process_flights = function(availability_data, list_size) {
         return_flights: processed_return
     };
 }
+var response = null;
 
 // CONFIRMED: WORKING
 // http://localhost:3000/get_flights?num_passengers=2&arrival_station=SIN&departure_date=2017-04-19&departure_station=KUL&return_date=2017-04-20
@@ -136,24 +137,21 @@ router.get('/*', function (req, res) {
     };
 
     console.log("API REQUEST: \n "+ JSON.stringify(FLIGHT_OPTIONS));
-    var response = null;
 
-    request(FLIGHT_OPTIONS, function(err, res, body) {
+
+    request(FLIGHT_OPTIONS, function(err, ress, body) {
         let bob = JSON.parse(body);
-        console.log("API RESPONSE: \n"+JSON.stringify(bob));
+        //console.log("API RESPONSE: \n"+JSON.stringify(bob));
         //TODO DO SOMETHING WITH BOBBY =]
-        response = clean_FLIGHT_RESPONSE(bob);
+        response = process_flights(bob);
+        console.log("FILTER: "+JSON.stringify(response));
+        res.json(response);
+        res.end('End' + response);
     });
-
-
-    res.json(response);
-    res.end('End');
 
 });
 
-function clean_FLIGHT_RESPONSE (res) {
-           return null;    // The function returns the product of p1 and p2
-};
+
 
 
 module.exports = router;
