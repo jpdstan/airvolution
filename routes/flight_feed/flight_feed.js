@@ -69,14 +69,13 @@ router.get('/', function(req, res) {
   function findAirports(pictures) {
     try {
       var airports = [];
-      console.log("Pictures: " + JSON.stringify(pictures));
 
       if (!pictures) {
         res.sendStatus(400);
       }
 
-      for (var i = 0; i < pictures["data"].length; i++) {
-        if (pictures["data"][i].location != null) {
+      for (var i = 0; i < pictures['data'].length; i++) {
+        if (pictures['data'][i].location != null) {
           var airport = util.getNearestAirport(pictures['data'][i]);
           airports.push(airport);
         }
