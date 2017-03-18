@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
       client_id: client_id,
       client_secret: client_secret,
       grant_type: 'authorization_code',
-      redirect_uri: host + '/flights',
+      redirect_uri: host + '/flight_feed',
       code: code
     },
     json : true
