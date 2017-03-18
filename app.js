@@ -1,5 +1,3 @@
-
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -9,18 +7,17 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
+<<<<<<< b8c6196d9224262828902b9e3143d64d5ddc1115
 var get_flights = require('./routes/getflight');
+=======
+var flights = require('./routes/flight_feed');
+>>>>>>> add flight feed, remove view engine and view rendering
 
 var app = express();
 
 var env = process.env.NODE_ENV || 'staging';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'staging';
-
-// view engine setup
-
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
 
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
@@ -35,6 +32,7 @@ app.use(cookieParser());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/get_flights', get_flights);
+app.use('/flights', flights);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,11 +52,6 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'staging') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err,
-            title: 'error'
-        });
     });
 }
 
@@ -66,11 +59,6 @@ if (app.get('env') === 'staging') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {},
-        title: 'error'
-    });
 });
 
 
