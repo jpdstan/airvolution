@@ -3,12 +3,16 @@ var router = express.Router();
 var request = require('request-promise');
 const airports = require('../assets/airports.json');
 
+var util = require('./flight_feed.util.js');
+
 /* GET a list of airports and their associated liked Insta photos.
 * See documentation for example response.
 * */
 router.get('/', function(req, res) {
   console.log("Loading flight feed...");
   var code = req.query.code;
+
+  // where the magic happens
   getAccessToken(code)
     .then(requestLikedPictures)
     .then(findAirports);

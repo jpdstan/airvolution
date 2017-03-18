@@ -1,14 +1,7 @@
-/**
- * Created by developer on 3/19/17.
- */
-/**
- * Created by developer on 3/18/17.
- */
 var express = require('express');
 var router = express.Router();
 var http = require('http');
 var request = require('request');
-
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
