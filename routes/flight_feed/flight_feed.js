@@ -52,6 +52,7 @@ router.get('/', function(req, res) {
     var options = {
       method: 'GET',
       uri: 'https://api.instagram.com/v1/users/self/media/liked?access_token=' + access_token
+      json: true
     };
 
     return request(options)
