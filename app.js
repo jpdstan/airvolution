@@ -13,9 +13,9 @@ var get_flights = require('./routes/getflight');
 
 var app = express();
 
-var env = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV || 'staging';
 app.locals.ENV = env;
-app.locals.ENV_DEVELOPMENT = env == 'development';
+app.locals.ENV_DEVELOPMENT = env == 'staging';
 
 // view engine setup
 
@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 
-if (app.get('env') === 'development') {
+if (app.get('env') === 'staging') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
