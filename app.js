@@ -10,11 +10,29 @@ var users = require('./routes/user');
 var get_flights = require('./routes/getflight');
 var flights = require('./routes/flight_feed');
 
+var env_json = require('./env.json');
+
 var app = express();
 
 var env = process.env.NODE_ENV || 'staging';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'staging';
+
+// Set backend API endpoint
+switch (env) {
+    case "staging":
+        app.locals.HOST = env_json["staging"]["url"];
+        break;
+    case "production":
+        app.locals.HOST = env_json["production"]["url"];
+        break;
+}
+
+// Set Airvolution and Instagram API
+app.locals.AIR_URL = env_json["airvolution_api"]["url"];
+app.locals.AIR_API_KEY = env_json["airvolution_api"]["api_key"];
+app.locals.INSTA_ID = env_json["instagram"]["client_id"];
+app.locals.INSTA_SECRET = env_json["instagram"]["client_secret"];
 
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
@@ -26,14 +44,14 @@ app.use(cookieParser());
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
+// For testing client
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
-
-
+// Routes
 app.use('/', routes);
 app.use('/users', users);
 app.use('/get_flights', get_flights);

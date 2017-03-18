@@ -29,18 +29,5 @@ router.get('/secret*', function (req, res) {
 });
 
 
-//Componenet #1
-
-
-//Component #2
-
-
-
-
-
-//Component #3
-
-
-
 
 module.exports = router;
