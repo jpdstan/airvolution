@@ -73,7 +73,6 @@ router.get('/', function(req, res) {
       if (!pictures) {
         res.sendStatus(400);
       }
-
       for (var i = 0; i < pictures['data'].length; i++) {
         if (pictures['data'][i].location != null) {
           var airport = util.getNearestAirport(pictures['data'][i]);

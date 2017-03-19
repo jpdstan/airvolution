@@ -1,6 +1,6 @@
 var fs = require('fs');
 var airports = JSON.parse(fs.readFileSync('assets/airports.json', 'utf8'));
-console.log(JSON.stringify(airports));
+
 function distBW(photo, airport, unit) {
   var photolat =  Math.PI * photo.lat/180
   var photolon = photo.lon
@@ -38,6 +38,7 @@ var getNearestAirport = function(insta_obj) {
     lat: insta_obj.location.latitude
   }
   var closest = getCode(location)
+  console.log(JSON.stringify(closest));
   if (closest.distance > 200) {
     return null;
   }
