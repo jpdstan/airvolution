@@ -38,12 +38,12 @@ var getNearestAirport = function(insta_obj) {
     lat: insta_obj.location.latitude
   }
   var closest = getCode(location)
-  console.log(JSON.stringify(closest));
   if (closest.distance > 200) {
     return null;
   }
   else {
     var airport_data = {};
+    airport_data[closest.airportCode] = "";
     airport_data[closest.airportCode]['name'] = closest.name;
     airport_data[closest.airportCode]['referer_photo'] = insta_obj.images.standard_resolution;
     return airport_data;
