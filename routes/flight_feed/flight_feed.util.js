@@ -33,6 +33,7 @@ function getCode(photo) {
 
 //returns null if > 200 km or the airport code otherwise
 var getNearestAirport = function(insta_obj) {
+  console.log(JSON.stringify(insta_obj));
   var location = {
     lon: insta_obj.location.longitude,
     lat: insta_obj.location.latitude
