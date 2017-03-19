@@ -18,7 +18,7 @@ function distBW(photo, airport, unit) {
 }
 
 //returns an object with the airport code and the distance
-function getCode(photo, airports) {
+function getCode(photo) {
   return Object.keys(airports)
     .map(airportCode => {
       var data = {
@@ -37,7 +37,7 @@ var getNearestAirport = function(insta_obj) {
     lon: insta_obj.location.longitude,
     lat: insta_obj.location.latitude
   }
-  var closest = getCode(location, airports)
+  var closest = getCode(location)
   if (closest.distance > 200) {
     return null;
   }
