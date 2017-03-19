@@ -105,16 +105,6 @@ router.get('/*', function (req, res) {
     var departure_station = req.query.departure_station;
     var return_date = req.query.return_date;
 
-    // Do Flight check up here
-
-     /* //Dummy Values:
-        num_passengers = '2';
-        departure_station = 'KUL';
-        arrival_station_POST = 'SIN'; //Shanghai
-        departure_date = '2017-04-19';
-        return_date = '2017-04-20';
-      */
-
 
     var FLIGHT_OPTIONS = {
         url: 'https://airvolution-api.airasia.com/2017/api/',
@@ -149,7 +139,6 @@ router.get('/*', function (req, res) {
     });
 
 });
-
 
 
 
