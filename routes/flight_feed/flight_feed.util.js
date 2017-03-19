@@ -44,7 +44,7 @@ var getNearestAirport = function(insta_obj) {
   }
   else {
     var airport_data = {};
-    airport_data[closest.airportCode] = "";
+    airport_data[closest.airportCode] = {};
     airport_data[closest.airportCode]['name'] = closest.name;
     airport_data[closest.airportCode]['referer_photo'] = insta_obj.images.standard_resolution.url;
     return airport_data;
