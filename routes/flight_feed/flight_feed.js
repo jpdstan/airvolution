@@ -83,16 +83,16 @@ router.get('/', function(req, res) {
 
       console.log(JSON.stringify(airports));
 
-      //airports = airports.reduce(function (acc, curr) {
-      //  console.log("Current " + JSON.stringify(curr));
-      //  if (acc[Object.keys(curr)[0]]) {
-      //    acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
-      //  } else {
-      //    acc[Object.keys(curr)[0]]['referer_photos'] = [curr.referer_photo];
-      //    acc[Object.keys(curr)[0]]['station_name'] = curr.name;
-      //  }
-      //  return acc;
-      //}, {});
+      airports = airports.reduce(function (acc, curr) {
+        console.log("Current " + JSON.stringify(curr));
+        if (acc[Object.keys(curr)[0]]) {
+          acc[Object.keys(curr)[0]]['referer_photos'].push(curr.referer_photo);
+        } else {
+          acc[Object.keys(curr)[0]]['referer_photos'] = [curr.referer_photo];
+          acc[Object.keys(curr)[0]]['station_name'] = curr.name;
+        }
+        return acc;
+      }, {});
 
       res.status(200).send({'data' : airports});
     }
